@@ -10,10 +10,10 @@ In Class:[R＿markdown](https://github.com/a1032600060/107-3/blob/master/Week1/0
 At Home:<br />
 ### [Week2]
 In Class:
-At Home:
+At Home:<br />
 ### [Week3]
 In Class:
-At Home:
+At Home:<br />
 ### [Week4]
 In Class:
-At Home:
+At Home:<br />
