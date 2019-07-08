@@ -9,5 +9,11 @@ Department：世新經濟四<br />
 In Class:[R＿markdown](https://github.com/a1032600060/107-3/blob/master/Week1/0708.html) <br />
 At Home:<br />
 ### [Week2]
+In Class:
+At Home:
 ### [Week3]
+In Class:
+At Home:
 ### [Week4]
+In Class:
+At Home:
