@@ -6,5 +6,5 @@ ID：A103260060<br />
 Department：世新經濟四<br />
 ## Schedule
 ### [Week1]
-In Class:[R＿markdown] (https://github.com/a1032600060/107-3/blob/master/Week1/0708.html) <br />
+In Class:[R＿markdown] (https://github.com/a1032600060/107-3/blob/master/Week1/0708.html)<br />
 At Home:<br />
