@@ -9,7 +9,7 @@ Department：世新經濟四<br />
 In Class:[R＿markdown](https://github.com/a1032600060/107-3/blob/master/Week1/0708.html) <br />
 At Home:<br />
 ### [Week2]
-In Class:[nba](https://a10326006.github.io/107-3/week2/nba.html)  <br />
+In Class:[nba](https://a103260060.github.io/107-3/week2/nba.html)  <br />
 At Home:<br />
 ### [Week3]
 In Class:<br />
