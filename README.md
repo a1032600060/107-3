@@ -12,7 +12,7 @@ At Home:<br />
 In Class:[nba finals](https://a1032600060.github.io/107-3/week2/nba.html)  <br />
 At Home:<br />
 ### [Week3]
-In Class:<br />
+In Class:[nba圖片](https://github.com/a1032600060/107-3/blob/master/week3/nba%E5%9C%96%E7%89%87.html) <br />
 At Home:<br />
 ### [Week4]
 In Class:<br />
