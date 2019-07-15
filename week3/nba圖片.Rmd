@@ -1,0 +1,34 @@
+---
+title: "nba圖片"
+output: html_document
+---
+
+
+
+
+```{r}
+
+library(dplyr)
+library(ggplot2)
+setwd("/Users/lichengze/Documents/GitHub/107-3/week2")
+
+nba = read.csv("nba.csv")
+nba1 = read.csv("nba team.csv")
+nba <- mutate(nba, Player=sapply(strsplit(as.character(nba$Player), "\\\\"), function(x){x[1]}))
+
+nba1 <- filter(nba1, Player %in% nba$Player)
+
+result <- merge(nba,nba1,by="Player")
+result
+
+result$X2018.19=substring(result$X2018.19,2)%>%
+as.numeric()
+
+result$Guaranteed=substring(result$Guaranteed,2)%>%
+as.numeric()
+
+###分析上場時間跟年薪的關係
+ggplot(data=result, aes(x=X2018.19, y=MIN, group=1)) + 
+geom_line()
+
+```
