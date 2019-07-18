@@ -27,8 +27,17 @@ as.numeric()
 result$Guaranteed=substring(result$Guaranteed,2)%>%
 as.numeric()
 
-###分析上場時間跟年薪的關係
-ggplot(data=result, aes(x=X2018.19, y=MIN, group=1)) + 
-geom_line()
+
+
 
 ```
+
+分析上場時間跟年薪的關係
+
+
+
+```{r}
+ggplot(data=result, aes(x=X2018.19, y=MIN, group=1)) + 
+geom_line()
+```
+
