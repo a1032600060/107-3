@@ -41,3 +41,5 @@ ggplot(data=result, aes(x=X2018.19, y=MIN, group=1)) +
 geom_line()
 ```
 
+
+結論：並非上場時間越多，所得年薪越高。
