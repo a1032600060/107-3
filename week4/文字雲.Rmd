@@ -1,0 +1,41 @@
+---
+title: "word"
+output: html_document
+---
+
+```{r}
+library(dplyr)
+library(rvest)
+
+```
+
+
+把nba的網址爬蟲出來
+```{r}
+title = read_html("https://sports.ltn.com.tw/basketball") %>%
+  html_nodes(".boxTitle .listA .list_title") %>%  
+  html_text() %>% iconv("UTF-8")
+title
+str(title)
+```
+開始斷詞
+```{r}
+library(jiebaR)
+cc = worker()
+cc[title]
+```
+找出次數的分配
+```{r}
+nba <-table(cc[title])
+nba           
+```
+轉成data
+```{r}
+data.frame(nba)
+
+```
+轉成文字雲
+```{r}
+library("wordcloud2")
+wordcloud2(nba)
+
