@@ -1,0 +1,63 @@
+---
+title: "專題報告"
+output: html_document
+---
+
+
+抓取NBA的資料
+```{r}
+library(dplyr)
+library(readr)
+library(ggplot2)
+setwd("/Users/lichengze/Documents/GitHub/107-3/week2")
+nba = read_csv("nba.csv")
+nba1 = read_csv("nba team .csv")
+nba <- mutate(nba, Player=sapply(strsplit(as.character(nba$Player), "\\\\"), function(x){x[1]}))
+
+nba1 <- filter(nba1, Player %in% nba$Player)
+
+result <- merge(nba,nba1,by="Player")
+result
+```
+
+
+分析上場時間跟年薪的圖表
+```{r}
+result$X2018.19=substring(result[,"2018-19"],2)%>%
+as.numeric()
+
+result$Guaranteed=substring(result$Guaranteed,2)%>%
+as.numeric()
+
+ggplot(data=result, aes(x=Player, y=X2018.19, fill=MIN)) + 
+geom_bar(stat = "identity") +
+theme(axis.text.x=element_text(angle=90,size=10,vjust=0.5),axis.text.y=element_text(size=10),axis.title.y=element_text(size=18))
+```
+
+
+
+分析投籃出手數對於年薪的關係
+```{r}
+ggplot(data=result, aes(x=Player, y=X2018.19, fill=FG)) + 
+geom_bar(stat = "identity") +
+theme(axis.text.x=element_text(angle=90,size=10,vjust=0.5),axis.text.y=element_text(size=10),axis.title.y=element_text(size=18))
+```
+
+
+
+分析平均得分於年薪的關係
+```{r}
+ggplot(data=result, aes(x=Player, y=X2018.19, fill=PTS)) + 
+geom_bar(stat = "identity") +
+theme(axis.text.x=element_text(angle=90,size=10,vjust=0.5),axis.text.y=element_text(size=10),axis.title.y=element_text(size=18))
+```
+
+
+分析平均三分命中率對於年薪的關係
+```{r}
+ggplot(data=result, aes(x=Player, y=X2018.19, fill=`3PA`)) + 
+geom_bar(stat = "identity") +
+theme(axis.text.x=element_text(angle=90,size=10,vjust=0.5),axis.text.y=element_text(size=10),axis.title.y=element_text(size=18))
+```
+
+結論是在各項數據上來說都年薪跟以上這些數值都有些微相關性，並非其中一項數據高或低會直接影響到球員的年薪，但是綜合來說 stephen curry的年薪是值得這麼高的，因為他在各項數據當中都為前一二名，合理的推斷他確實可以有較高的薪水。
